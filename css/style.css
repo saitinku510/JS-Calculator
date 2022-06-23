@@ -18,7 +18,12 @@ section {
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    overflow: scroll; }
+    overflow: scroll;
+    background: #ffffff9c;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; }
+    section #display::-webkit-scrollbar {
+      display: none; }
   section .buttons {
     display: flex;
     flex-wrap: wrap;

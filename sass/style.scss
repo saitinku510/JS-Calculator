@@ -21,6 +21,12 @@ section{
         display: flex;
         flex-direction: row-reverse;
         overflow: scroll;
+        background: #ffffff9c;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
     .buttons{
         display: flex;
@@ -42,5 +48,7 @@ section{
         border-bottom-right-radius: 10px;
     }
 }
+
+
 
 
