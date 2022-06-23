@@ -47,6 +47,21 @@ section{
         background-color: orangered;
         border-bottom-right-radius: 10px;
     }
+    .data{
+        padding: 50px 0;
+        .table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+                th{
+                    background-color: #cecece;
+                }
+                th,td{
+                border: 1px solid;
+                padding: 10px;
+            }
+        }
+    }
 }
 
 

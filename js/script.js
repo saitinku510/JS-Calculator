@@ -1,6 +1,11 @@
 let display = document.getElementById("display");
 
 let buttons = Array.from(document.getElementsByClassName('button'));
+let operators = document.getElementsByClassName('operat')
+
+if(display.innerText = '') {
+    operators.addClass('for');
+}
 
 buttons.map(button => {
     button.addEventListener('click', (e) => {
