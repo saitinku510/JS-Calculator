@@ -1,11 +1,6 @@
 let display = document.getElementById("display");
 
 let buttons = Array.from(document.getElementsByClassName('button'));
-let operators = document.getElementsByClassName('operat')
-
-if(display.innerText = '') {
-    operators.addClass('for');
-}
 
 buttons.map(button => {
     button.addEventListener('click', (e) => {
@@ -21,7 +16,11 @@ buttons.map(button => {
                 break;
             case '=':
                 try{
+                    let data = document.getElementById('data');
+                    data.innerHTML = display.innerText;
                     display.innerText = eval(display.innerText);
+                    let result = document.getElementById('result');
+                    result.innerHTML = display.innerText;
                 }catch {
                     display.innerText = 'Error!';
                 }
@@ -31,3 +30,4 @@ buttons.map(button => {
         }
     });
 });
+
