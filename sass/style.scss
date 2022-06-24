@@ -56,9 +56,20 @@ section{
                 th{
                     background-color: #cecece;
                 }
-                th,td{
+                th,td,tr{
                 border: 1px solid;
                 padding: 10px;
+            }
+            button {
+                padding: 10px;
+                text-align: center;
+                background: red;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                width: 100%;
             }
         }
     }

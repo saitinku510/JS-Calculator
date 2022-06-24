@@ -47,8 +47,18 @@ section {
       border-collapse: collapse; }
       section .data .table th {
         background-color: #cecece; }
-      section .data .table th, section .data .table td {
+      section .data .table th, section .data .table td, section .data .table tr {
         border: 1px solid;
         padding: 10px; }
+      section .data .table button {
+        padding: 10px;
+        text-align: center;
+        background: red;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
