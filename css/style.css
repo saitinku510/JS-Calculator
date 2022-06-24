@@ -39,5 +39,16 @@ section {
   section #equal {
     background-color: orangered;
     border-bottom-right-radius: 10px; }
+  section .data {
+    padding: 50px 0; }
+    section .data .table {
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse; }
+      section .data .table th {
+        background-color: #cecece; }
+      section .data .table th, section .data .table td {
+        border: 1px solid;
+        padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */
