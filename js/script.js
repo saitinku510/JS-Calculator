@@ -1,8 +1,7 @@
 let display = document.getElementById("display");
-
 let buttons = Array.from(document.getElementsByClassName('button'));
-
 let dataCapture = [];
+let equalTo = document.getElementById('equal');
 
 
 buttons.map(button => {
@@ -19,17 +18,17 @@ buttons.map(button => {
                 break;
             case '=':
                 try{
-                    let data = document.getElementById('data');
+                    var data = document.getElementById('data');
                     data = display.innerText;
                     display.innerText = eval(display.innerText);
-                    let result = document.getElementById('result');
+                    var result = document.getElementById('result');
                     result = display.innerText;
+                    
                     let obj = {
                         data : data,
                         result : result,
                     }
                     dataCapture.push(obj);
-                    console.log(dataCapture);	
                     genUI();
                 }catch {
                     display.innerText = 'Error!';
@@ -41,19 +40,31 @@ buttons.map(button => {
     });
 });
 
+
 function genUI(){
     document.getElementById("tablebody").innerHTML="";
-    dataCapture.forEach(function(s,i){
-    var nr=document.createElement("tr")
-    nr.innerHTML=i+1
-                                            
-    for(var k in s){
-        var nd=document.createElement("td")
-        nd.innerHTML=s[k]
-        nr.appendChild(nd);															
-        }
-                    
-    document.getElementById("tablebody").appendChild(nr)											
-    });
+    dataCapture.forEach(function(s ,i){
+    var tableRow = document.createElement("tr");
+    tableRow.innerHTML = i+1;
     
+    for(var key in s){
+        var tableStructure = document.createElement("td");
+        tableStructure.innerHTML = s[key];
+        tableRow.appendChild(tableStructure);
+        }
+        var btn = document.createElement("td");
+        btn.innerHTML = '<button>Del</button>';
+        tableRow.appendChild(btn);
+        document.getElementById("tablebody").appendChild(tableRow);
+        
+        btn.addEventListener('click', () => {
+        delRow(i);
+        });
+    });
+
+}
+
+function delRow(i){
+    dataCapture.splice(i,1)
+    genUI();
 }
