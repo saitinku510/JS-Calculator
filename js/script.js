@@ -1,7 +1,6 @@
 let display = document.getElementById("display");
 let buttons = Array.from(document.getElementsByClassName('button'));
 let dataCapture = [];
-let equalTo = document.getElementById('equal');
 
 
 buttons.map(button => {
